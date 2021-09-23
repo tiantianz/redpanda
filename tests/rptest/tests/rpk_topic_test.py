@@ -8,7 +8,6 @@
 # by the Apache License, Version 2.0
 
 from ducktape.utils.util import wait_until
-from ducktape.mark import ignore
 from ducktape.mark.resource import cluster
 import ducktape.errors
 
@@ -163,7 +162,6 @@ class RpkToolTest(RedpandaTest):
                    backoff_sec=20,
                    err_msg="Message didn't appear.")
 
-    @ignore  # https://github.com/vectorizedio/redpanda/issues/1899
     @cluster(num_nodes=4)
     def test_consume_from_partition(self):
         topic = 'topic_partition'
