@@ -13,7 +13,6 @@ quick:
 
   excluded:
   - tests/librdkafka_test.py
-  - tests/compaction_recovery_test.py
   - tests/wasm_identity_test.py
   - tests/wasm_failure_recovery_test.py
   - tests/wasm_redpanda_failure_recovery_test.py
